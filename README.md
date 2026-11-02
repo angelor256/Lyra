@@ -30,3 +30,10 @@ supabase/schema.sql
 `ink #121212/#1A1A1A` · `sage #8A9A86 / deep #7B8C7A` · `chalk #FFF` · `bone #F4F4F0`. Fuentes: Syne (títulos) + Inter.
 
 El número de WhatsApp y el umbral de envío gratis se editan en `/admin/banner`.
+
+## Despliegue en GitHub Pages
+Funciona con cualquiera de las dos fuentes:
+- **GitHub Actions** (recomendado): Settings → Pages → Source: GitHub Actions. El workflow compila en cada push a `main`.
+- **Deploy from a branch (main / root)**: el build ya está publicado en la raíz del repo. Tras cambiar código ejecuta `npm run publish:root` y haz commit de `index.html`, `404.html` y `assets/`.
+
+El archivo de desarrollo es `app.html` (`npm run dev` lo abre solo); `index.html` de la raíz es el build.
