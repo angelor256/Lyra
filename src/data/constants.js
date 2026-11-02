@@ -17,6 +17,6 @@ export const SORTS = [
   { id: 'price-desc', label: 'Precio: mayor a menor' },
 ]
 export const DEFAULT_SETTINGS = {
-  banner: { enabled: true, text: 'Envío gratis por compras mayores a $80 ✦', link: '/tienda', tone: 'sage' },
-  store: { whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '34600000000', freeShippingFrom: 80 },
+  banner: { enabled: true, text: 'Envío gratis por compras mayores a ₡45 000 ✦', link: '/tienda', tone: 'sage' },
+  store: { whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '34600000000', freeShippingFrom: 45000 },
 }
