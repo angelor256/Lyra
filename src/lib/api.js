@@ -4,8 +4,8 @@ import { seedProducts } from '../data/seed'
 import { DEFAULT_SETTINGS } from '../data/constants'
 import { uid } from './format'
 
-const LS_P = 'lyra.products.v1'
-const LS_S = 'lyra.settings.v1'
+const LS_P = 'lyra.products.v2'
+const LS_S = 'lyra.settings.v2'
 const LS_A = 'lyra.admin.session'
 const read = (k, fb) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb } catch { return fb } }
 const write = (k, v) => {

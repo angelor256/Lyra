@@ -4,7 +4,7 @@ import Sparkle from './Sparkle'
 export default function Logo({ light = false, tagline = false, className = '' }) {
   return (
     <Link to="/" aria-label="LYRA — inicio" className={`inline-flex flex-col items-center ${light ? 'text-white' : 'text-ink'} ${className}`}>
-      <span className="font-display text-2xl font-semibold leading-none tracking-brand pl-[0.32em]">LYRA</span>
+      <span className="font-display text-xl font-semibold leading-none tracking-brand pl-[0.32em] sm:text-2xl">LYRA</span>
       {tagline && <span className="mt-1 text-[8px] uppercase tracking-[0.35em] opacity-70">Move with purpose</span>}
     </Link>
   )

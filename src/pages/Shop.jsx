@@ -67,9 +67,9 @@ export default function Shop() {
       <p className="eyebrow">Colección</p>
       <h1 className="mt-2 text-4xl font-bold">{q ? `Resultados para “${q}”` : cats.length === 1 ? cats[0] : 'Toda la tienda'}</h1>
       <div className="mt-8 flex items-center justify-between border-y border-ink/10 py-3">
-        <button className="flex items-center gap-2 text-xs uppercase tracking-wide2 lg:hidden" onClick={() => setPanel(true)}><SlidersHorizontal className="h-4 w-4" /> Filtros {active > 0 && `(${active})`}</button>
+        <button className="flex shrink-0 items-center gap-2 border border-ink/15 bg-white px-3 py-2 text-xs uppercase tracking-wide2 lg:hidden" onClick={() => setPanel(true)}><SlidersHorizontal className="h-4 w-4" /> Filtros {active > 0 && `(${active})`}</button>
         <p className="hidden text-sm text-ink-500 lg:block">{list.length} prendas</p>
-        <label className="flex items-center gap-2 text-xs"><span className="uppercase tracking-wide2 text-ink-500">Ordenar</span>
+        <label className="flex items-center gap-2 text-xs"><span className="sr-only uppercase tracking-wide2 text-ink-500 sm:not-sr-only">Ordenar</span>
           <select value={sort} onChange={(e) => setSort(e.target.value)} className="border border-ink/15 bg-white px-2 py-1.5 text-sm">{SORTS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}</select>
         </label>
       </div>

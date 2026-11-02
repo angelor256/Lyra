@@ -54,8 +54,8 @@ export default function ProductForm() {
       <section className="mt-6 grid gap-4 bg-white p-5 sm:grid-cols-2">
         <div className="sm:col-span-2"><label className="label" htmlFor="n">Nombre</label><input id="n" required className="input" value={p.name} onChange={(e) => set('name', e.target.value)} /></div>
         <div className="sm:col-span-2"><label className="label" htmlFor="d">Descripción</label><textarea id="d" rows={3} className="input" value={p.description} onChange={(e) => set('description', e.target.value)} /></div>
-        <div><label className="label" htmlFor="pr">Precio ($)</label><input id="pr" required type="number" min="0" step="0.01" className="input" value={p.price} onChange={(e) => set('price', e.target.value)} /></div>
-        <div><label className="label" htmlFor="cp">Precio anterior (opcional)</label><input id="cp" type="number" min="0" step="0.01" className="input" value={p.comparePrice || ''} onChange={(e) => set('comparePrice', e.target.value)} /></div>
+        <div><label className="label" htmlFor="pr">Precio (₡)</label><input id="pr" required type="number" min="0" step="500" className="input" value={p.price} onChange={(e) => set('price', e.target.value)} /></div>
+        <div><label className="label" htmlFor="cp">Precio anterior (opcional)</label><input id="cp" type="number" min="0" step="500" className="input" value={p.comparePrice || ''} onChange={(e) => set('comparePrice', e.target.value)} /></div>
         <div><label className="label" htmlFor="c">Categoría</label><select id="c" className="input" value={p.category} onChange={(e) => set('category', e.target.value)}>{CATEGORIES.map((c) => <option key={c}>{c}</option>)}</select></div>
         <div><label className="label" htmlFor="s">Nivel de soporte</label><select id="s" className="input" value={p.support} onChange={(e) => set('support', e.target.value)}>{SUPPORT_LEVELS.map((c) => <option key={c}>{c}</option>)}</select></div>
         <fieldset className="sm:col-span-2"><legend className="label">Disciplinas</legend>

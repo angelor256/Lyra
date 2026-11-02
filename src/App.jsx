@@ -4,6 +4,7 @@ import AnnouncementBar from './components/AnnouncementBar'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CartDrawer from './components/CartDrawer'
+import Loader from './components/Loader'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import ProductDetail from './pages/ProductDetail'
@@ -23,6 +24,7 @@ function Storefront() {
 export default function App() {
   return (
     <>
+      <Loader />
       <ScrollTop />
       <Routes>
         <Route element={<Storefront />}>

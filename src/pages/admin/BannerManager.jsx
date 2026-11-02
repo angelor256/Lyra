@@ -4,7 +4,7 @@ import { useShop } from '../../store/ShopContext'
 import Sparkle from '../../components/Sparkle'
 
 const TONES = [['sage', 'Verde salvia', 'bg-sage-deep text-white'], ['dark', 'Carbón', 'bg-ink text-white'], ['light', 'Blanco', 'bg-white text-ink border border-ink/10']]
-const PRESETS = ['Envío gratis por compras mayores a $80 ✦', 'Nueva Colección Disponible ✦', '-15% en tu primer pedido · Código LYRA15 ✦']
+const PRESETS = ['Envío gratis por compras mayores a ₡45 000 ✦', 'Nueva Colección Disponible ✦', '-15% en tu primer pedido · Código LYRA15 ✦']
 
 export default function BannerManager() {
   const { settings, saveSetting } = useShop()
@@ -42,7 +42,7 @@ export default function BannerManager() {
       <section className="mt-6 grid gap-4 bg-white p-5 sm:grid-cols-2">
         <h2 className="text-sm font-semibold uppercase tracking-wide2 sm:col-span-2">Tienda</h2>
         <div><label className="label" htmlFor="wa">WhatsApp del negocio</label><input id="wa" className="input" placeholder="34600000000" value={s.whatsapp} onChange={(e) => setS({ ...s, whatsapp: e.target.value })} /><p className="mt-1 text-[11px] text-ink-500">Con código de país, sin “+”.</p></div>
-        <div><label className="label" htmlFor="fs">Envío gratis desde ($)</label><input id="fs" type="number" min="0" className="input" value={s.freeShippingFrom} onChange={(e) => setS({ ...s, freeShippingFrom: e.target.value })} /></div>
+        <div><label className="label" htmlFor="fs">Envío gratis desde (₡)</label><input id="fs" type="number" min="0" className="input" value={s.freeShippingFrom} onChange={(e) => setS({ ...s, freeShippingFrom: e.target.value })} /></div>
       </section>
 
       {err && <p role="alert" className="mt-4 text-sm text-red-700">{err}</p>}

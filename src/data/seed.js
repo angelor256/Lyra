@@ -27,8 +27,8 @@ const care = 'Lavar a máquina en frío (30°C) del revés con colores similares
 const fit = 'Corte ajustado true-to-size. Si estás entre dos tallas, elige la menor para mayor compresión o la mayor para mayor comodidad. Modelo mide 1,72 m y lleva talla S.'
 
 export const seedProducts = () =>
-  base.map(([name, category, discipline, support, price, sold, description, fabric, colors], i) => ({
-    id: 'seed-' + (i + 1), name, category, discipline, support, price, sold, description, fabric, fit, care,
+  base.map(([name, category, discipline, support, usd, sold, description, fabric, colors], i) => ({
+    id: 'seed-' + (i + 1), price: Math.round((usd * 540) / 500) * 500, name, category, discipline, support, sold, description, fabric, fit, care,
     active: true, createdAt: Date.now() - i * 86400000 * 6,
     colors: colors.map((k, j) => col(k, category, st(j === 2 ? 0 : 4, 8, 10, 7, j === 1 ? 0 : 3))),
   }))
