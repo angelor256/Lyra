@@ -28,6 +28,11 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10 py-5 text-center text-[11px] uppercase tracking-wide2 text-white/40">
         <Sparkle className="mr-2 inline h-3 w-3" /> © {new Date().getFullYear()} LYRA · Move with purpose
+        <p className="mt-3 normal-case tracking-normal">
+          Creado por{' '}
+          <a href="https://angelor256.github.io/buildbeetech/#inicio" target="_blank" rel="noopener noreferrer"
+            className="font-medium text-sage underline-offset-4 transition hover:text-white hover:underline">Buildbee</a>
+        </p>
       </div>
     </footer>
   )
